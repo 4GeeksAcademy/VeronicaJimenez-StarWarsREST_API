@@ -59,7 +59,7 @@ def get_single_planet(planets_id):
     return jsonify(planet.serialize()), 200
 
 @app.route('/users', methods=['GET'])
-def get_planets():
+def get_users():
     users = User.query.all()
     json = [user.serialize() for user in users]
     return json, 200
